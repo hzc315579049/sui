@@ -607,7 +607,11 @@
 
 // The Grid
 #grid {
-
+  .core{
+    .span (@columns) {
+      width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
+    }      
+  }
   .core (@gridColumnWidth, @gridGutterWidth) {
 
     .spanX (@index) when (@index > 0) {
